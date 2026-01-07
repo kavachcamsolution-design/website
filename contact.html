@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Kavachcam | Professional CCTV & IT Services Meerut</title>
+    <script src="assets/js/tailwind.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4A69BD',    // Deep Tech Blue
+                        'secondary': '#F8C210',  // Vibrant Amber
+                        'accent': '#26C2B9',     // Tech Teal
+                        'dark': '#1E272E',       // Oil Blue Black
+                        'light-bg': '#F4F7F9'    // Off-White
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-outline {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-glow {
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px -10px var(--glow-color, rgba(0, 0, 0, 0.3));
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F4F7F9; }
+        ::-webkit-scrollbar-thumb { background: #4A69BD; border-radius: 10px; }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light-bg">
+
+    <!-- TOP INFO BAR -->
+    <div class="bg-dark text-white text-[10px] md:text-xs py-2 px-4 md:px-12 flex flex-wrap justify-between items-center gap-2 border-b border-primary/20">
+        <div class="flex gap-4">
+            <span class="flex items-center"><i class="fas fa-certificate text-secondary mr-1"></i> GST: 09FHYPK0414A1ZE</span>
+            <span class="flex items-center"><i class="fas fa-check-circle text-accent mr-1"></i> MSME Certified</span>
+        </div>
+        <div class="flex gap-4 items-center">
+            <span class="hidden md:inline"><i class="fas fa-map-marker-alt text-secondary mr-1"></i> P.L. Sharma Road, Meerut</span>
+            <a href="tel:9568493549" class="bg-primary px-3 py-1 rounded font-bold hover:bg-blue-700 transition">Call: 9568493549</a>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center h-20">
+            <div class="flex flex-col">
+                <span class="text-2xl font-black leading-none text-primary uppercase">KAVACHCAM</span>
+                <span class="text-secondary font-bold text-xs tracking-[0.2em] uppercase">SOLUTION</span>
+            </div>
+            
+            <div class="hidden lg:flex space-x-8 text-sm font-bold uppercase tracking-wide">
+                <a href="index.html" class="text-dark hover:text-primary transition">Home</a>
+                <a href="About.html" class="text-primary hover:text-primary transition">About</a>
+                <a href="product.html" class="text-dark hover:text-primary transition">Products</a>
+                <a href="contact.html" class="text-dark hover:text-primary transition">Contact</a>
+            </div>
+
+            <button class="lg:hidden text-2xl text-primary" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 p-4 shadow-xl">
+             <a href="index.html" class="block py-3 font-bold border-b border-light-bg hover:text-primary">Home</a>
+             <a href="About.html" class="block py-3 font-bold border-b border-light-bg text-primary">About</a>
+             <a href="product.html" class="block py-3 font-bold border-b border-light-bg hover:text-primary">Products</a>
+             <a href="contact.html" class="block py-3 font-bold hover:text-primary">Contact</a>
+        </div>
+    </header>
+
+    <!-- CONTACT HERO -->
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        
+        <div class="text-center mb-16">
+            <span class="text-primary font-black uppercase tracking-widest text-sm mb-2 block">Reach Out To Us</span>
+            <h1 class="text-4xl md:text-6xl font-black text-dark mb-6 uppercase tracking-tight">Let's Secure Your <span class="text-primary">Space</span></h1>
+            <div class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed space-y-4">
+                <p>We believe security isn’t just about hardware; it’s about the <span class="text-secondary font-bold">peace of mind</span> you feel when your property is protected.</p>
+                <p>Whether you need a new CCTV installation, IT networking, or urgent computer repair—our team in Meerut is ready to help.</p>
+            </div>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-24">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/919568493549" target="_blank" class="btn-glow flex items-center justify-center gap-3 text-white font-bold py-5 px-6 rounded-2xl bg-[#25D366]" style="--glow-color: rgba(37, 211, 102, 0.4);">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                WhatsApp Chat
+            </a>
+            <!-- Call -->
+            <a href="tel:+919568493549" class="btn-glow flex items-center justify-center gap-3 text-white font-bold py-5 px-6 rounded-2xl bg-primary" style="--glow-color: rgba(74, 105, 189, 0.4);">
+                <i class="fas fa-phone-alt text-xl"></i>
+                Call Directly
+            </a>
+            <!-- Email -->
+            <a href="mailto:sales@kavachcam.in" class="btn-glow flex items-center justify-center gap-3 text-white font-bold py-5 px-6 rounded-2xl bg-dark" style="--glow-color: rgba(30, 39, 46, 0.4);">
+                <i class="fas fa-envelope text-xl"></i>
+                Email Us
+            </a>
+            <!-- Location -->
+            <a href="https://www.google.com/maps/search/Mawana+Road+Meerut" target="_blank" class="btn-glow flex items-center justify-center gap-3 text-white font-bold py-5 px-6 rounded-2xl bg-accent" style="--glow-color: rgba(38, 194, 185, 0.4);">
+                <i class="fas fa-map-marker-alt text-xl"></i>
+                Visit Store
+            </a>
+        </div>
+
+        <!-- CONTACT DETAIL CARDS -->
+        <div class="grid lg:grid-cols-2 gap-12 items-start bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-gray-200 border border-gray-100">
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xs font-black text-secondary uppercase tracking-widest mb-2">Our Physical Location</h3>
+                    <p class="text-xl font-bold text-dark leading-snug">
+                        Shop No. 114, Kavery Complex<br> 
+                        P.L. Sharma Road, Meerut, U.P. 250001
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
+                    <div>
+                        <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">Helpdesk & Support</h3>
+                        <p class="font-bold text-dark text-xl">+91 9568493549</p>
+                        <p class="font-bold text-dark text-xl">+91 8449493549</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">Business Hours</h3>
+                        <p class="font-bold text-dark">09:00 AM - 08:00 PM</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-wide">Mon - Sat (Closed Sunday)</p>
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Authorized Service Partners</h3>
+                    <div class="flex flex-wrap gap-6 opacity-40 grayscale group-hover:grayscale-0 transition duration-500">
+                        <span class="font-black text-xl italic tracking-tighter">UNITECH</span>
+                        <span class="font-black text-xl italic tracking-tighter text-blue-800">DELL</span>
+                        <span class="font-black text-xl italic tracking-tighter text-red-800">CP PLUS</span>
+                        <span class="font-black text-xl italic tracking-tighter text-blue-900">HP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INQUIRY FORM -->
+            <div class="bg-light-bg p-8 rounded-3xl border border-gray-100 shadow-inner">
+                <h3 class="text-xl font-black mb-6 uppercase text-primary">Send a Quick Message</h3>
+                <form onsubmit="return false" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-[10px] font-bold uppercase text-gray-400 mb-1 block">Full Name</label>
+                            <input type="text" placeholder="John Doe" class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition text-sm">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold uppercase text-gray-400 mb-1 block">Phone Number</label>
+                            <input type="tel" placeholder="+91" class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold uppercase text-gray-400 mb-1 block">Service Interest</label>
+                        <select class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition text-sm appearance-none bg-white">
+                            <option>CCTV Installation Quote</option>
+                            <option>IT Networking / Server Rack</option>
+                            <option>Laptop / Printer Repair</option>
+                            <option>Bulk Product Enquiry</option>
+                            <option>Other Enquiry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold uppercase text-gray-400 mb-1 block">Message</label>
+                        <textarea rows="4" placeholder="How can we help you today?" class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition text-sm"></textarea>
+                    </div>
+                    <button class="w-full bg-secondary text-dark font-black py-4 rounded-xl hover:bg-yellow-500 transition uppercase tracking-widest shadow-lg shadow-secondary/20">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center">
+            <p class="text-gray-400 font-medium italic">Authorized associate for Unitech "In Safe Hands" technology.</p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-gray-400 py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <span class="text-primary text-3xl font-black">KAVACHCAM</span>
+                <span class="text-secondary font-bold block tracking-widest text-sm">SOLUTION</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 mb-8 text-xs font-bold uppercase tracking-widest">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="About.html" class="hover:text-white transition">About</a>
+                <a href="product.html" class="hover:text-white transition">Products</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
+            </div>
+            <p class="text-sm mb-8 max-w-lg mx-auto leading-relaxed">Authorized Associate of Unitech, CP Plus, Dell, and HP Technologies. Dedicated to providing reliable tech solutions in Meerut.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="pt-8 border-t border-white/5">
+                <p class="text-[10px] uppercase tracking-[0.3em]">&copy; 2026 Kavachcam Solution Meerut. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Kavachcam Solution Meerut</title>    
+    <script src="assets/js/tailwind.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4A69BD',    // Deep Tech Blue
+                        'secondary': '#F8C210',  // Vibrant Amber
+                        'accent': '#26C2B9',     // Tech Teal
+                        'dark': '#1E272E',       // Oil Blue Black
+                        'light-bg': '#F4F7F9'    // Off-White
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1E272E 0%, #4A69BD 100%);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F4F7F9; }
+        ::-webkit-scrollbar-thumb { background: #4A69BD; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-light-bg text-dark leading-relaxed">
+
+    <!-- TOP INFO BAR -->
+    <div class="bg-dark text-white text-[10px] md:text-xs py-2 px-4 md:px-12 flex flex-wrap justify-between items-center gap-2 border-b border-primary/20">
+        <div class="flex gap-4">
+            <span class="flex items-center"><i class="fas fa-certificate text-secondary mr-1"></i> GST: 09FHYPK0414A1ZE</span>
+            <span class="flex items-center"><i class="fas fa-check-circle text-accent mr-1"></i> MSME Certified</span>
+        </div>
+        <div class="flex gap-4 items-center">
+            <span class="hidden md:inline"><i class="fas fa-map-marker-alt text-secondary mr-1"></i> P.L. Sharma Road, Meerut</span>
+            <a href="tel:9568493549" class="bg-primary px-3 py-1 rounded font-bold hover:bg-blue-700 transition">Call: 9568493549</a>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center h-20">
+            <div class="flex flex-col">
+                <span class="text-2xl font-black leading-none text-primary uppercase">KAVACHCAM</span>
+                <span class="text-secondary font-bold text-xs tracking-[0.2em] uppercase">SOLUTION</span>
+            </div>
+            
+            <div class="hidden lg:flex space-x-8 text-sm font-bold uppercase tracking-wide">
+                <a href="index.html" class="text-dark hover:text-primary transition">Home</a>
+                <a href="About.html" class="text-primary hover:text-primary transition">About</a>
+                <a href="product.html" class="text-dark hover:text-primary transition">Products</a>
+                <a href="contact.html" class="text-dark hover:text-primary transition">Contact</a>
+            </div>
+
+            <button class="lg:hidden text-2xl text-primary" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 p-4 shadow-xl">
+             <a href="index.html" class="block py-3 font-bold border-b border-light-bg hover:text-primary">Home</a>
+             <a href="About.html" class="block py-3 font-bold border-b border-light-bg text-primary">About</a>
+             <a href="product.html" class="block py-3 font-bold border-b border-light-bg hover:text-primary">Products</a>
+             <a href="contact.html" class="block py-3 font-bold hover:text-primary">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-24 hero-gradient text-white overflow-hidden">
+        <div class="absolute inset-0 bg-accent opacity-5 skew-y-6 translate-y-12"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">Defining <span class="text-secondary italic">Security</span></h1>
+            <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
+                Kavachcam Solution is the shield that protects your home, your business, and your digital infrastructure with professional precision.
+            </p>
+        </div>
+    </section>
+
+    <!-- OUR STORY SECTION -->
+    <section class="py-20 max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+        <div class="order-2 md:order-1">
+            <h2 class="text-xs font-black text-primary uppercase tracking-widest mb-4">Our Journey</h2>
+            <h3 class="text-4xl font-black text-dark mb-6 leading-tight uppercase">Rooted in Meerut,<br> Driven by <span class="text-primary">Expertise</span></h3>
+            <div class="space-y-4 text-gray-600 text-lg">
+                <p>
+                    Established with a vision to revolutionize the security landscape in the Meerut and Rajpura regions, <strong>Kavachcam Solution</strong> began as a response to a simple need: reliable, high-tech surveillance that works when it matters most.
+                </p>
+                <p>
+                    As a proud authorized associate of <strong>Unitech</strong> and <strong>CP Plus</strong>, we leverage industry excellence from our partners to bring world-class hardware to our local community. Our foundation is built on technical mastery, from complex IP camera arrays to precise IT hardware recovery.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8 mt-10">
+                <div class="stat-card border-l-4 border-secondary pl-6">
+                    <p class="text-4xl font-black text-primary mb-1">2026</p>
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Year of Establishment</p>
+                </div>
+                <div class="stat-card border-l-4 border-accent pl-6">
+                    <p class="text-4xl font-black text-primary mb-1">500+</p>
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Surveillance Devices</p>
+                </div>
+            </div>
+        </div>
+        <div class="order-1 md:order-2 relative">
+            <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-secondary"></div>
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Tech Workplace" class="rounded-3xl shadow-2xl transition duration-700 border-4 border-white">
+            <div class="absolute -bottom-6 -right-6 bg-white p-8 rounded-2xl shadow-xl hidden lg:block border-b-4 border-primary">
+                <p class="text-dark font-black italic">"In Safe Hands"</p>
+                <p class="text-xs text-primary font-bold uppercase tracking-widest">Our Brand Promise</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="py-24 border-y border-gray-100 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+            <div class="bg-light-bg p-12 rounded-3xl border border-gray-100 shadow-sm">
+                <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mb-8 text-2xl shadow-lg shadow-primary/20">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h4 class="text-2xl font-black mb-4 uppercase text-dark">Our Mission</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    To provide cutting-edge surveillance and IT solutions that empower our customers with safety and control. We aim to be the most trusted name in security infrastructure in Uttar Pradesh by delivering excellence in every pixel and every connection.
+                </p>
+            </div>
+            <div class="bg-dark text-white p-12 rounded-3xl relative overflow-hidden shadow-xl">
+                <div class="absolute right-0 top-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16"></div>
+                <div class="w-16 h-16 bg-secondary text-dark rounded-2xl flex items-center justify-center mb-8 text-2xl shadow-lg shadow-secondary/20 relative z-10">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h4 class="text-2xl font-black mb-4 uppercase relative z-10">Our Vision</h4>
+                <p class="text-blue-100 text-lg leading-relaxed relative z-10">
+                    To create a future where every home and business in Meerut is "In Safe Hands." We envision a tech-integrated community where security is seamless, accessible, and uncompromisingly reliable through local empowerment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES -->
+    <section class="py-24 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black text-dark uppercase">The <span class="text-primary">Shield</span> Framework</h2>
+            <div class="w-20 h-2 bg-secondary mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-center space-y-4 group">
+                <div class="w-20 h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <i class="fas fa-microchip text-3xl text-primary group-hover:text-white"></i>
+                </div>
+                <h5 class="text-xl font-black uppercase tracking-tight">Genuine Hardware</h5>
+                <p class="text-gray-500 text-sm">We only deploy Unitech, Dell, and HP certified equipment, ensuring longevity and legal warranty protection for every client.</p>
+            </div>
+            <div class="text-center space-y-4 group">
+                <div class="w-20 h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                    <i class="fas fa-handshake text-3xl text-accent group-hover:text-white"></i>
+                </div>
+                <h5 class="text-xl font-black uppercase tracking-tight">Local Integrity</h5>
+                <p class="text-gray-500 text-sm">Based in Rajpura, Meerut, we provide prompt on-site technical support within standard SLAs, understanding local needs better than anyone.</p>
+            </div>
+            <div class="text-center space-y-4 group">
+                <div class="w-20 h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary group-hover:text-dark transition-all duration-300">
+                    <i class="fas fa-award text-3xl text-secondary group-hover:text-dark"></i>
+                </div>
+                <h5 class="text-xl font-black uppercase tracking-tight">Service Mastery</h5>
+                <p class="text-gray-500 text-sm">Our team is specialized in multi-brand motherboard repair, networking, and advanced surveillance analytics for a complete IT shield.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-20 bg-secondary text-dark text-center relative overflow-hidden">
+        <div class="absolute left-0 top-0 h-full w-24 bg-white/10 skew-x-12 -translate-x-12"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-8 uppercase tracking-tighter leading-none">Ready to upgrade your <br><span class="text-primary">Surveillance?</span></h2>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="contact.html" class="bg-dark text-white px-10 py-4 rounded-full font-black hover:bg-black transition uppercase tracking-widest text-sm shadow-xl">Get a Free Quote</a>
+                <a href="tel:9568493549" class="bg-white text-primary border-2 border-primary px-10 py-4 rounded-full font-black hover:bg-gray-50 transition uppercase tracking-widest text-sm shadow-xl">Call Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-gray-400 py-16 border-t border-primary/20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-8 flex flex-col items-center">
+                <span class="text-primary text-3xl font-black tracking-tighter uppercase leading-none">KAVACHCAM</span>
+                <span class="text-secondary font-bold block text-sm tracking-[0.4em] mt-1">SOLUTION</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-10 text-xs font-bold uppercase tracking-widest">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="About.html" class="hover:text-white transition">About</a>
+                <a href="product.html" class="hover:text-white transition">Products</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
+            </div>
+            <p class="text-sm mb-8 max-w-lg mx-auto leading-relaxed">Authorized Associate of Unitech, CP Plus, Dell, and HP Technologies. Dedicated to providing reliable tech solutions in Meerut and surrounding regions.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-gray-500">
+                <p>&copy; 2026 Kavachcam Solution Meerut. All Rights Reserved.</p>
+                <p>GST: 09FHYPK0414A1ZE | MSME Registered</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

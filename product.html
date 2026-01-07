@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Kavachcam Solution - Security & IT Catalogue</title>
+    <script src="assets/js/tailwind.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4A69BD', // Deep Tech Blue
+                        'secondary': '#F8C210', // Vibrant Amber
+                        'accent': '#26C2B9', // Tech Teal
+                        'dark': '#1E272E', // Oil Blue Black
+                        'light-bg': '#F4F7F9' // Off-White
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .filter-checkbox:checked + label {
+            color: #4A69BD;
+            font-weight: 700;
+        }
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="bg-light-bg text-dark font-sans">
+
+    <!-- TOP INFO BAR -->
+    <div class="bg-dark text-white text-[10px] md:text-xs py-2 px-4 md:px-12 flex flex-wrap justify-between items-center gap-2 border-b border-primary/20">
+        <div class="flex gap-4">
+            <span class="flex items-center"><i class="fas fa-certificate text-secondary mr-1"></i> GST: 09FHYPK0414A1ZE</span>
+            <span class="flex items-center"><i class="fas fa-check-circle text-accent mr-1"></i> MSME Certified</span>
+        </div>
+        <div class="flex gap-4 items-center">
+            <span class="hidden md:inline"><i class="fas fa-map-marker-alt text-secondary mr-1"></i> P.L. Sharma Road, Meerut</span>
+            <a href="tel:9568493549" class="bg-secondary text-dark px-3 py-1 rounded font-black hover:brightness-110 transition">Call: 9568493549</a>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center h-20">
+            <div class="flex flex-col">
+                <span class="text-2xl font-black leading-none text-primary uppercase">KAVACHCAM</span>
+                <span class="text-secondary font-bold text-xs tracking-[0.2em] uppercase">SOLUTION</span>
+            </div>
+            
+            <div class="hidden lg:flex space-x-8 text-sm font-bold uppercase tracking-wide">
+                <a href="index.html" class="text-dark hover:text-primary transition">Home</a>
+                <a href="About.html" class="text-primary hover:text-primary transition">About</a>
+                <a href="product.html" class="text-dark hover:text-primary transition">Products</a>
+                <a href="contact.html" class="text-dark hover:text-primary transition">Contact</a>
+            </div>
+
+            <button class="lg:hidden text-2xl text-primary" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 p-4 shadow-xl">
+             <a href="index.html" class="block py-3 font-bold border-b border-light-bg hover:text-primary">Home</a>
+             <a href="About.html" class="block py-3 font-bold border-b border-light-bg text-primary">About</a>
+             <a href="product.html" class="block py-3 font-bold border-b border-light-bg hover:text-primary">Products</a>
+             <a href="contact.html" class="block py-3 font-bold hover:text-primary">Contact</a>
+        </div>
+    </header>
+
+    <!-- SEARCH & BREADCRUMBS -->
+    <section class="bg-dark py-12">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                    <h1 class="text-3xl font-black text-white uppercase tracking-tight">Security <span class="text-secondary">Catalogue</span></h1>
+                    <p class="text-blue-100 text-sm mt-2">Authorized Unitech & CP Plus Solutions</p>
+                </div>
+                <div class="relative w-full md:w-96">
+                    <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search by model or feature (e.g. 5MP, POE)..." 
+                        class="w-full bg-white/10 border border-white/20 text-white rounded-lg py-3 px-12 focus:outline-none focus:border-primary transition shadow-2xl">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-secondary"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN SHOP AREA -->
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col lg:flex-row gap-12">
+        
+        <!-- SIDE FILTER -->
+        <aside class="w-full lg:w-64 flex-shrink-0">
+            <div class="sticky top-32 space-y-8">
+                <div>
+                    <h3 class="text-xs font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Categories</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="cat-camera" class="filter-checkbox hidden" value="Camera" onchange="filterProducts()">
+                            <label for="cat-camera" class="cursor-pointer text-sm font-bold flex items-center hover:text-primary transition">
+                                <span class="w-2 h-2 rounded-full bg-gray-300 mr-3"></span>Surveillance Cameras
+                            </label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="cat-network" class="filter-checkbox hidden" value="Networking" onchange="filterProducts()">
+                            <label for="cat-network" class="cursor-pointer text-sm font-bold flex items-center hover:text-primary transition">
+                                <span class="w-2 h-2 rounded-full bg-gray-300 mr-3"></span>POE & Networking
+                            </label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="cat-storage" class="filter-checkbox hidden" value="Storage" onchange="filterProducts()">
+                            <label for="cat-storage" class="cursor-pointer text-sm font-bold flex items-center hover:text-primary transition">
+                                <span class="w-2 h-2 rounded-full bg-gray-300 mr-3"></span>Racks & Storage
+                            </label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="cat-power" class="filter-checkbox hidden" value="Power" onchange="filterProducts()">
+                            <label for="cat-power" class="cursor-pointer text-sm font-bold flex items-center hover:text-primary transition">
+                                <span class="w-2 h-2 rounded-full bg-gray-300 mr-3"></span>Power & Cables
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-primary p-6 rounded-xl text-white shadow-lg shadow-primary/20 relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
+                    <h4 class="font-black text-lg mb-2 relative z-10">Need Help?</h4>
+                    <p class="text-xs text-blue-100 mb-4 leading-relaxed relative z-10">Not sure which model fits your needs? Get a free consultation.</p>
+                    <a href="https://wa.me/9568493549" class="block text-center bg-secondary text-dark py-2 rounded font-black text-xs uppercase tracking-widest hover:brightness-110 transition relative z-10">Chat Now</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- PRODUCT GRID -->
+        <div class="flex-grow">
+            <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <!-- Products will be injected here by JS -->
+            </div>
+            
+            <!-- EMPTY STATE -->
+            <div id="noResults" class="hidden text-center py-20">
+                <i class="fas fa-search text-5xl text-gray-200 mb-4"></i>
+                <p class="text-gray-500 font-bold">No products match your search or filter.</p>
+                <button onclick="resetFilters()" class="text-primary font-black uppercase text-xs mt-2 underline tracking-widest">Reset All Filters</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-gray-400 py-16 border-t border-primary/20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-8 flex flex-col items-center">
+                <img src="assets/images/logo.png" alt="Kavachcam Logo" onerror="this.style.display='none'" class="h-16 w-auto mb-4 brightness-0 invert">
+                <span class="text-white text-3xl font-black tracking-tighter uppercase leading-none">KAVACHCAM</span>
+                <span class="text-secondary font-bold block text-sm tracking-[0.4em] mt-1">SOLUTION</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-10 text-xs font-bold uppercase tracking-widest">
+                <a href="index.html" class="hover:text-secondary transition">Home</a>
+                <a href="products.html" class="hover:text-secondary transition">Products</a>
+                <a href="contact.html" class="hover:text-secondary transition">Contact</a>
+                <a href="tel:9568493549" class="hover:text-secondary transition text-secondary">Support: 9568493549</a>
+            </div>
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-gray-500">
+                <p>&copy; 2026 Kavachcam Solution Meerut. All Rights Reserved.</p>
+                <p>GST: 09FHYPK0414A1ZE | MSME Registered</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT ENGINE -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Data pulled from your UNITECH Catalogue.pdf
+        const products = [
+            {
+                id: "UTCSDA-1002",
+                name: "2.4 MP AHD Dome Camera",
+                category: "Camera",
+                price: "Ask for Price",
+                image: "assets/images/UTCSDA-1002.png",
+                features: ["Plastic Body", "3.6mm Lens", "1080P", "Full Color/Night Vision", "Audio Support"]
+            },
+            {
+                id: "UTCSBA-1002",
+                name: "2.4 MP AHD Bullet Camera",
+                category: "Camera",
+                price: "Ask for Price",
+                image: "assets/images/UTCSBA-1002.png",
+                features: ["Plastic Body", "Weather Proof", "Full Color/Night Vision", "Audio Support"]
+            },
+            {
+                id: "UTIPDCP-5102",
+                name: "5 MP IP Dome Camera",
+                category: "Camera",
+                price: "Ask for Price",
+                image: "assets/images/UTIPDCP-5102.png",
+                features: ["YTOT 0081 Lens", "ONVIF POE", "Full Color Night Vision", "6 Warm Light LED"]
+            },
+            {
+                id: "UTIPBCP-5102",
+                name: "5 MP IP Bullet Camera",
+                category: "Camera",
+                price: "Ask for Price",
+                image: "assets/images/UTIPBCP-5102.png",
+                features: ["Weather Proof", "ONVIF POE", "5MP Clarity", "High Durability"]
+            },
+            {
+                id: "UTR-1002",
+                name: "2U Folding Rack",
+                category: "Storage",
+                price: "Ask for Price",
+                image: "assets/images/UTR-1002.png",
+                features: ["Front Fiber", "Safe Key Lock", "Size: 500x350x162", "Weight: 2.2kg"]
+            },
+            {
+                id: "UT04-100MBPS",
+                name: "4CH POE Switch",
+                category: "Networking",
+                price: "Ask for Price",
+                image: "assets/images/UT04-100MBPS.png",
+                features: ["15.4W Per Port", "10/100 Mbps", "2 Uplink Ports", "Metal Casing"]
+            },
+            {
+                id: "UTG08-1000MBPS",
+                name: "8CH POE Switch Giga",
+                category: "Networking",
+                price: "Ask for Price",
+                image: "assets/images/UTG08-1000MBPS.png",
+                features: ["Gigabit Speeds", "8+2 Giga Ports", "65W Total Power", "High Performance"]
+            },
+            {
+                id: "UTPSE-108",
+                name: "8CH Metal Power Supply",
+                category: "Power",
+                price: "Ask for Price",
+                image: "assets/images/UTPSE-108.png",
+                features: ["Short Circuit Protection", "Auto Start", "Over Voltage Protection", "Metal Body"]
+            },
+            {
+                id: "UT-BNC-114",
+                name: "Semi Gold BNC Connector",
+                category: "Power",
+                price: "Ask for Price",
+                image: "assets/images/UT-BNC-114.png",
+                features: ["16/40 Gauge Copper", "High Quality PVC", "Semi Gold Pins"]
+            }
+        ];
+
+        function renderProducts(filteredList) {
+            const grid = document.getElementById('productGrid');
+            const noRes = document.getElementById('noResults');
+            
+            grid.innerHTML = '';
+            
+            if (filteredList.length === 0) {
+                noRes.classList.remove('hidden');
+                return;
+            } else {
+                noRes.classList.add('hidden');
+            }
+
+            filteredList.forEach(product => {
+                const card = `
+                    <div class="product-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col border-b-4 border-transparent hover:border-primary">
+                        <div class="relative h-64 bg-gray-100 overflow-hidden group">
+                            <img src="${product.image}" alt="${product.name}" 
+                                onerror="this.src='https://placehold.co/600x400/1E272E/F8C210?text=${product.id}'"
+                                class="w-full h-full object-contain p-8 group-hover:scale-110 transition duration-500">
+                            <span class="absolute top-4 right-4 bg-dark text-white text-[10px] font-black px-2 py-1 rounded tracking-widest">${product.id}</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-accent text-[10px] font-black uppercase tracking-widest border border-accent/20 px-2 py-0.5 rounded">Protected</span>
+                                <span class="text-primary text-[10px] font-black uppercase tracking-widest">${product.category}</span>
+                            </div>
+                            <h3 class="text-lg font-black text-dark leading-tight mb-4">${product.name}</h3>
+                            <ul class="text-xs text-gray-500 space-y-2 mb-6 flex-grow">
+                                ${product.features.map(f => `<li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> ${f}</li>`).join('')}
+                            </ul>
+                            <div class="pt-4 border-t border-gray-50 flex items-center justify-between">
+                                <span class="font-black text-dark">${product.price}</span>
+                                <a href="https://wa.me/9568493549?text=Inquiry for ${product.id}" class="bg-secondary text-dark px-4 py-2 rounded font-black text-[10px] uppercase tracking-widest hover:brightness-110 transition shadow-md shadow-secondary/10">
+                                    Enquire <i class="fab fa-whatsapp ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        function filterProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const checkedCategories = Array.from(document.querySelectorAll('.filter-checkbox:checked')).map(cb => cb.value);
+
+            const filtered = products.filter(p => {
+                const matchesSearch = p.name.toLowerCase().includes(query) || 
+                                    p.id.toLowerCase().includes(query) || 
+                                    p.features.some(f => f.toLowerCase().includes(query));
+                
+                const matchesCategory = checkedCategories.length === 0 || checkedCategories.includes(p.category);
+
+                return matchesSearch && matchesCategory;
+            });
+
+            renderProducts(filtered);
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
+            renderProducts(products);
+        }
+
+        // Initial Load
+        window.onload = () => renderProducts(products);
+    </script>
+</body>
+</html>
